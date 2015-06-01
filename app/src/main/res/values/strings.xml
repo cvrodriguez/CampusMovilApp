@@ -10,7 +10,7 @@
     <string name="consultarnotas">Consultar Notas</string>
     <string name="notasactuales">Notas Actuales</string>
     <string name="registroext">Registro Extendido</string>
-    <string name="titnostasactuales">NOTAS ACTUALES</string>
+    <string name="titnostasactuales">MATERIAS</string>
     <string name="titrecordar">RECORDAR USUARIO</string>
     <string name="titreasignar">REASIGNAR CONTRASEÑA</string>
     <string name="edtCedula">Cedula</string>
@@ -20,4 +20,11 @@
     <string name="title_activity_notas_act">NotasActActivity</string>
     <string name="title_activity_recordar">RecordarActivity</string>
     <string name="title_activity_reasignar">ReasignarActivity</string>
+    <string name="title_activity_notas_materia">NotasMateriaActivity</string>
+    <string name="titsotasmateria">DETALLE MATERIA</string>
+    <string name="lbl_pparcial">Primer parcial</string>
+    <string name="lbl_sparcial">Segundo parcial</string>
+    <string name="lbl_tparcial">Tercer parcial</string>
+    <string name="lbl_notasvarias">Notas Varias</string>
+    <string name="lbl_notaproyecto">Nota proyecto</string>
 </resources>

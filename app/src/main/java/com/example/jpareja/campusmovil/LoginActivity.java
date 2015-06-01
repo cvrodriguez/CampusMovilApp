@@ -1,9 +1,10 @@
 package com.example.jpareja.campusmovil;
 
+import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -14,6 +15,7 @@ import android.widget.Toast;
 import com.example.jpareja.campusmovil.clientes.LoginCliente;
 import com.example.jpareja.campusmovil.dto.RespuestaLogin;
 
+import com.example.jpareja.campusmovil.utils.Constants;
 import retrofit.RestAdapter;
 
 
@@ -56,7 +58,7 @@ public class LoginActivity extends ActionBarActivity {
 
 
         // crear cliente para conexion al ws rest
-        RestAdapter restAdapter = new RestAdapter.Builder().setEndpoint("http://192.168.1.50:8080/movilCampus/campusmovil/").build();
+        RestAdapter restAdapter = new RestAdapter.Builder().setEndpoint(Constants.END_POINT).build();
 
         loginCliente=restAdapter.create(LoginCliente.class);
     }
@@ -70,6 +72,13 @@ public class LoginActivity extends ActionBarActivity {
 
     private void ingresar() {
         AsyncTask<String, Void, RespuestaLogin> asyncTask = new AsyncTask<String, Void, RespuestaLogin>() {
+            ProgressDialog dialog;
+
+            @Override
+            protected void onPreExecute() {
+                dialog = ProgressDialog.show(LoginActivity.this, null, "Autenticando...");
+            }
+
             @Override
             protected RespuestaLogin doInBackground(String... parametros) {
                 String usu = parametros[0];
@@ -81,11 +90,12 @@ public class LoginActivity extends ActionBarActivity {
             @Override
             protected void onPostExecute(RespuestaLogin respuestaLogin) {
                 if (respuestaLogin.getIngresar()) {
-                    Toast.makeText(LoginActivity.this, "Pa' Entro", Toast.LENGTH_LONG).show();
-                }else{
-                    Toast.makeText(LoginActivity.this, "Mamola", Toast.LENGTH_LONG).show();
+                    Intent i = new Intent(LoginActivity.this, DatosActivity.class);
+                    i.putExtra(DatosActivity.INFO_USUARIO, respuestaLogin);
+                    startActivity(i);
                 }
 
+                dialog.dismiss();
                 Toast.makeText(LoginActivity.this, respuestaLogin.getMensaje(), Toast.LENGTH_LONG).show();
             }
         };

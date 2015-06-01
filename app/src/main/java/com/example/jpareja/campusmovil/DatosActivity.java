@@ -1,17 +1,60 @@
 package com.example.jpareja.campusmovil;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageButton;
+import android.widget.TextView;
+import com.example.jpareja.campusmovil.dto.RespuestaLogin;
 
 
 public class DatosActivity extends ActionBarActivity {
+
+    private ImageButton imgBtnAcademico;
+
+    private TextView edtCedula;
+    private TextView edtNombre;
+    private TextView edtApellidos;
+    private TextView edtCarrera;
+    private Long idUsuario;
+
+    public static final String INFO_USUARIO = "info";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_datos);
+
+        RespuestaLogin respuestaLogin = (RespuestaLogin) getIntent().getSerializableExtra(INFO_USUARIO);
+
+        idUsuario = respuestaLogin.getIdestudiante();
+
+        imgBtnAcademico = (ImageButton) findViewById(R.id.imgBtnAcademico);
+        edtCedula = (TextView) findViewById(R.id.edtCedula);
+        edtNombre = (TextView) findViewById(R.id.edtNombre);
+        edtApellidos = (TextView) findViewById(R.id.edtApellidos);
+        edtCarrera = (TextView) findViewById(R.id.edtCarrera);
+
+        imgBtnAcademico.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                irAcademico();
+            }
+        });
+
+        edtCedula.setText(respuestaLogin.getIdentificacion());
+        edtNombre.setText(respuestaLogin.getNombre());
+        edtApellidos.setText(respuestaLogin.getApellido());
+        edtCarrera.setText("Ingenieria de Sistemas");
+    }
+
+    private void irAcademico() {
+        Intent i = new Intent(this, AcademicoActivity.class);
+        i.putExtra(AcademicoActivity.ID_ESTUDIANTE, idUsuario);
+        startActivity(i);
     }
 
 

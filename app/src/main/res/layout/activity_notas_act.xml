@@ -39,7 +39,12 @@
         android:layout_below="@id/txtVwNotas">
 
 
-
+        <ListView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/lstMaterias"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true"/>
     </RelativeLayout>
 
 
