@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.jpareja.campusmovil" >
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".LoginActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".DatosActivity"
+            android:label="@string/title_activity_datos" >
+        </activity>
+        <activity
+            android:name=".AcademicoActivity"
+            android:label="@string/title_activity_academico" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".NotasActActivity"
+            android:label="@string/title_activity_notas_act" >
+        </activity>
+        <activity
+            android:name=".RecordarActivity"
+            android:label="@string/title_activity_recordar" >
+        </activity>
+        <activity
+            android:name=".ReasignarActivity"
+            android:label="@string/title_activity_reasignar" >
+        </activity>
+    </application>
+
+</manifest>

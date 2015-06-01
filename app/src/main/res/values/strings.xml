@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">CampusMovil</string>
+    <string name="Bienvenido">BIENVENIDOS AL CAMPUS </string>
+    <string name="action_settings">Settings</string>
+    <string name="edtcontraseña">Contraseña</string>
+    <string name="title_activity_datos">DatosActivity</string>
+    <string name="academico">Academico</string>
+    <string name="matricula">Matricula</string>
+    <string name="consultamatricula">Consultar Matricula</string>
+    <string name="consultarnotas">Consultar Notas</string>
+    <string name="notasactuales">Notas Actuales</string>
+    <string name="registroext">Registro Extendido</string>
+    <string name="titnostasactuales">NOTAS ACTUALES</string>
+    <string name="titrecordar">RECORDAR USUARIO</string>
+    <string name="titreasignar">REASIGNAR CONTRASEÑA</string>
+    <string name="edtCedula">Cedula</string>
+    <string name="txtVwNombre">Nombre</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_academico">AcademicoActivity</string>
+    <string name="title_activity_notas_act">NotasActActivity</string>
+    <string name="title_activity_recordar">RecordarActivity</string>
+    <string name="title_activity_reasignar">ReasignarActivity</string>
+</resources>

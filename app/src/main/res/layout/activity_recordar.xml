@@ -1,0 +1,137 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.example.jpareja.campusmovil.RecordarActivity">
+    <ImageView
+        android:src="@drawable/logo"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#ff113b95"
+        android:id="@+id/imgVwlogo"
+        />
+
+    <TextView
+        android:id="@+id/txtVwRecordar"
+        android:text="@string/titrecordar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="#ffe2ac1c"
+        android:capitalize="words"
+        android:textColor="#ff050608"
+        android:textSize="18dp"
+        android:layout_below="@+id/imgVwlogo"
+        android:layout_alignLeft="@+id/imgVwlogo"
+        android:layout_alignStart="@+id/imgVwlogo"
+        />
+    <RelativeLayout
+        android:id="@+id/marcorecordar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:background="#FFFFFF"
+        android:layout_below="@id/txtVwRecordar"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true">
+
+        <TextView
+            android:id="@+id/txtVwReasigUsuario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="18dp"
+            android:textColor="#FFFFFF"
+            android:text="Cedula"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="80dp"
+            android:background="#ff113b95"
+            android:layout_above="@id/edtCedula"
+            android:layout_alignParentRight="true"
+
+        />
+        <EditText
+            android:id="@+id/edtrecordarCedula"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="18dp"
+            android:hint="Cedula"
+            android:layout_below="@id/txtVwReasigUsuario"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="80dp"
+            android:layout_marginLeft="20dp"
+            />
+        <ImageButton
+            android:id="@+id/imgBtnbuscar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/buscar"
+            android:layout_alignBottom="@+id/edtrecordarCedula"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+        />
+        <ImageView
+            android:id="@+id/imgVwsepararecordar1"
+            android:src="@drawable/separador"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edtrecordarCedula"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+        />
+        <TextView
+            android:id="@+id/txtVwRespuesta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:textColor="#ff113b95"
+            android:text="Su Usuario Es :"
+            android:background="#ffffff"
+            android:layout_below="@id/imgVwsepararecordar1"
+            android:layout_margin="20dp"
+         />
+        <EditText
+            android:id="@+id/edtrespuesta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:layout_below="@id/imgVwsepararecordar1"
+            android:layout_toRightOf="@id/txtVwRespuesta"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+         />
+        <ImageView
+            android:id="@+id/imgVwsepararecordar2"
+            android:src="@drawable/separador"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imgVwsepararecordar1"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="80dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+        />
+        <Button
+            android:id="@+id/btnRestablecer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:text="Restablecer Contraseña"
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_below="@id/imgVwsepararecordar2"
+        />
+
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>
