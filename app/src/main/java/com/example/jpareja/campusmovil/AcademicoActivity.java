@@ -22,7 +22,7 @@ public class AcademicoActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_academico);
 
-        btnVerMaterias = (Button) findViewById(R.id.btnConsultaMatricular);
+        btnVerMaterias = (Button) findViewById(R.id.btnnotasactuales);
 
         idEstudiante = getIntent().getLongExtra(ID_ESTUDIANTE, 0l);
 

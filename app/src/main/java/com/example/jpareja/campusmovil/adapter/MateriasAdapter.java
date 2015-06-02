@@ -12,7 +12,7 @@ import com.example.jpareja.campusmovil.dto.RespuestaMateria;
 import java.util.List;
 
 /**
- * Created by pbastidas on 6/1/15.
+ * Created by cvrodriguez on 6/1/15.
  */
 public abstract class MateriasAdapter extends BaseAdapter {
     private LayoutInflater inflador;

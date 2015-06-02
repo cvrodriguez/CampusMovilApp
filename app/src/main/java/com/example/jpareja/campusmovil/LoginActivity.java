@@ -10,12 +10,14 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 import com.example.jpareja.campusmovil.clientes.LoginCliente;
 import com.example.jpareja.campusmovil.dto.RespuestaLogin;
 
 import com.example.jpareja.campusmovil.utils.Constants;
+
 import retrofit.RestAdapter;
 
 
@@ -25,6 +27,7 @@ public class LoginActivity extends ActionBarActivity {
     private EditText txtContrasena;
     private Button btnIngresar;
     private Button btnCancelar;
+    ImageButton olvido;
 
     // Cliente de conexion al WS Rest
     private LoginCliente loginCliente;
@@ -41,11 +44,11 @@ public class LoginActivity extends ActionBarActivity {
         btnIngresar = (Button) findViewById(R.id.btnIngresar);
 
         btnCancelar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                cancelar();
-            }
-        }
+                                           @Override
+                                           public void onClick(View view) {
+                                               cancelar();
+                                           }
+                                       }
         );
 
 
@@ -60,7 +63,7 @@ public class LoginActivity extends ActionBarActivity {
         // crear cliente para conexion al ws rest
         RestAdapter restAdapter = new RestAdapter.Builder().setEndpoint(Constants.END_POINT).build();
 
-        loginCliente=restAdapter.create(LoginCliente.class);
+        loginCliente = restAdapter.create(LoginCliente.class);
     }
 
 
@@ -103,7 +106,22 @@ public class LoginActivity extends ActionBarActivity {
         String usuario = txtUsuario.getText().toString();
         String clave = txtContrasena.getText().toString();
 
+        olvido = (ImageButton) findViewById(R.id.imgBtnOlvidoUsuario);
+
+        olvido.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                olvido();
+            }
+        });
+
         asyncTask.execute(usuario, clave);
+    }
+
+    private void olvido() {
+        Intent i = new Intent(this, ReasignarActivity.class);
+
+        startActivity(i);
     }
 
     @Override

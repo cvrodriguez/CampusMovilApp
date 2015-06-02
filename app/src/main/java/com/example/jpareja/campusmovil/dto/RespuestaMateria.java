@@ -3,7 +3,7 @@ package com.example.jpareja.campusmovil.dto;
 import java.util.Objects;
 
 /**
- * Created by pbastidas on 6/1/15.
+ * Created by cvrodriguez on 6/1/15.
  */
 public class RespuestaMateria {
     private Long idmateria;
