@@ -40,7 +40,19 @@ public class AcademicoActivity extends ActionBarActivity {
         startActivity(i);
     }
 
+public void selectSemestre (View view){
 
+    Intent semestre = new Intent(this,SelectSemestre.class);
+    startActivity(semestre);
+
+
+
+
+
+
+
+
+}
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.

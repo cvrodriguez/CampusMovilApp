@@ -27,4 +27,10 @@
     <string name="lbl_tparcial">Tercer parcial</string>
     <string name="lbl_notasvarias">Notas Varias</string>
     <string name="lbl_notaproyecto">Nota proyecto</string>
+    <string name="title_activity_select_semestre">SelectSemestre</string>
+    <string name="title_activity_lista_materias">ListaMateriasActivity</string>
+
+
+
+
 </resources>

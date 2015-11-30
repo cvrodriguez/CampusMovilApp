@@ -47,6 +47,20 @@
             android:name=".NotasMateriaActivity"
             android:label="@string/title_activity_notas_materia" >
         </activity>
+        <activity
+            android:name=".SelectSemestre"
+            android:label="@string/title_activity_select_semestre" >
+        </activity>
+
+        <service
+            android:name=".clientes.MatriculaCliente"
+            android:exported="false" >
+        </service>
+
+        <activity
+            android:name=".ListaMateriasActivity"
+            android:label="@string/title_activity_lista_materias" >
+        </activity>
     </application>
 
 </manifest>

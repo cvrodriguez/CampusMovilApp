@@ -1,0 +1,52 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.example.jpareja.campusmovil.DatosActivity">
+
+    <ImageView
+        android:src="@drawable/logo"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#ff113b95"
+        android:id="@+id/imgVwlogo"
+        />
+
+    <TextView
+        android:id="@+id/txtVwBienvenido"
+        android:text="@string/Bienvenido"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="#ffe2ac1c"
+        android:capitalize="words"
+        android:textColor="#ff050608"
+        android:textSize="18dp"
+        android:layout_below="@+id/imgVwlogo"
+        android:layout_alignLeft="@+id/imgVwlogo"
+        android:layout_alignStart="@+id/imgVwlogo"/>
+
+    <ListView
+        android:id="@+id/lstVwmateriasX"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="100dp"
+
+
+
+        >
+
+
+
+    </ListView>
+
+
+
+
+    </RelativeLayout>
+
